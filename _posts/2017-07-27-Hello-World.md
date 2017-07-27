@@ -8,7 +8,7 @@ This blog is up now. So, what do you have to say?
 <iframe src="/assets/lang.html"
     style="max-width = 100%"
     sandbox="allow-same-origin allow-scripts"
-    width="80%"
+    width="100%"
     height="600"
     scrolling="no"
     seamless="seamless"
