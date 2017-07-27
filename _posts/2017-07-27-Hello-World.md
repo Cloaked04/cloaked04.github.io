@@ -5,13 +5,12 @@ comments: true
 ---
 This blog is up now. So, what do you have to say?
 
-<div style="align-items: center;justify-content: center;">
+<div style="align-items: center;">
 <iframe src="/assets/lang.html"
     style="max-width = 100%"
     sandbox="allow-same-origin allow-scripts"
     width="1000"
     height="500"
-    align="middle"
     scrolling="no"
     seamless="seamless"
     frameborder="0"">
@@ -22,10 +21,9 @@ This blog is up now. So, what do you have to say?
     sandbox="allow-same-origin allow-scripts"
     width="800"
     height="1000"
-    align="middle"
     scrolling="no"
     seamless="seamless"
-    frameborder="20">
+    frameborder="0">
 </iframe>
 </div>
  
