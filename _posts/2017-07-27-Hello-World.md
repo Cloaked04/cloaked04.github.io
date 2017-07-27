@@ -13,7 +13,7 @@ This blog is up now. So, what do you have to say?
     height="500"
     scrolling="no"
     seamless="seamless"
-    frameborder="0">
+    frameborder="20">
 </iframe>
 
 <iframe src="/assets/taco.html"
@@ -23,7 +23,7 @@ This blog is up now. So, what do you have to say?
     height="1000"
     scrolling="no"
     seamless="seamless"
-    frameborder="0">
+    frameborder="20">
 </iframe>
  
         
