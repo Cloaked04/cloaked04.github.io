@@ -5,11 +5,11 @@ comments: true
 ---
 This blog is up now. So, what do you have to say?
 
-<div style= "text-align:center">
+<div style= "text-align:left">
 <iframe src="/assets/lang.html"
     style="max-width = 100%"
     sandbox="allow-same-origin allow-scripts"
-    width="100%"
+    width="1000"
     height="600"
     scrolling="no"
     seamless="seamless"
