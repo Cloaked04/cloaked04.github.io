@@ -14,7 +14,8 @@ This blog is up now. So, what do you have to say?
     align="middle"
     scrolling="no"
     seamless="seamless"
-    frameborder="0">
+    frameborder="0"
+    style="align:center">
 </iframe>
 
 <iframe src="/assets/taco.html"
@@ -25,7 +26,8 @@ This blog is up now. So, what do you have to say?
     align="middle"
     scrolling="no"
     seamless="seamless"
-    frameborder="20">
+    frameborder="20"
+    style="align=center">
 </iframe>
  
         
