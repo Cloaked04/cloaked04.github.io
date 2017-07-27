@@ -5,7 +5,7 @@ comments: true
 ---
 This blog is up now. So, what do you have to say?
 
-<div style:"text-align:center">
+<div style= "text-align:center">
 <iframe src="/assets/lang.html"
     style="max-width = 100%"
     sandbox="allow-same-origin allow-scripts"
