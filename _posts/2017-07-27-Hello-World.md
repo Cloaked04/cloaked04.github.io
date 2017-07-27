@@ -7,14 +7,13 @@ This blog is up now. So, what do you have to say?
 
 
 <iframe src="/assets/lang.html"
-    style="max-width = 100%"
+    style="max-width = 100%;text-align:center;"
     sandbox="allow-same-origin allow-scripts"
     width= "1000"
     height="600"
     scrolling="no"
     seamless="seamless"
-    frameborder="0"
-    align= "left">
+    frameborder="0">
 </iframe>
 
 
