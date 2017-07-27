@@ -41,4 +41,4 @@ This blog is up now. So, what do you have to say?
 Bokeh.embed.embed_items(docs_json, render_items);});};if (document.readyState != "loading") fn();
 else document.addEventListener("DOMContentLoaded", fn);})();
         
-</script>
+</script>{height=60%}
