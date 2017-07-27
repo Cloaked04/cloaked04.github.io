@@ -23,14 +23,13 @@ This blog is up now. So, what do you have to say?
             margin: auto;
           }
         </style>
-    </head>
-    <body>
+  
         
  <div class="bk-root">
-            <div class="bk-plotdiv" id="7c4ec5b9-80c7-4c57-86d7-95aedb5f8827"></div>
-        </div>
+ <div class="bk-plotdiv" id="7c4ec5b9-80c7-4c57-86d7-95aedb5f8827"></div>
+ </div>
         
-        <script type="text/javascript">
+ <script type="text/javascript">
             (function() {
           var fn = function() {
             Bokeh.safely(function() {
@@ -43,5 +42,4 @@ This blog is up now. So, what do you have to say?
           if (document.readyState != "loading") fn();
           else document.addEventListener("DOMContentLoaded", fn);
         })();
-        
-        </script>
+</script>
