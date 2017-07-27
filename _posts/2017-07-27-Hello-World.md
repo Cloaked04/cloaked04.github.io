@@ -10,7 +10,7 @@ This blog is up now. So, what do you have to say?
     style="max-width = 100%"
     sandbox="allow-same-origin allow-scripts"
     width="100%"
-    height="600"
+    height="1000"
     scrolling="no"
     seamless="seamless"
     frameborder="0">
