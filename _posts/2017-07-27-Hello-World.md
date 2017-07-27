@@ -5,7 +5,7 @@ comments: true
 ---
 This blog is up now. So, what do you have to say?
 
-
+<div style="text-align:center; width:100%;">
 <iframe src="/assets/lang.html"
     style="max-width = 100%"
     sandbox="allow-same-origin allow-scripts"
@@ -15,7 +15,7 @@ This blog is up now. So, what do you have to say?
     scrolling="no"
     seamless="seamless"
     frameborder="0"
-    style="align:center">
+    style="width:1000px">
 </iframe>
 
 <iframe src="/assets/taco.html"
@@ -27,8 +27,9 @@ This blog is up now. So, what do you have to say?
     scrolling="no"
     seamless="seamless"
     frameborder="20"
-    style="align=center">
+    style="width=1000px">
 </iframe>
+</div>
  
         
 
