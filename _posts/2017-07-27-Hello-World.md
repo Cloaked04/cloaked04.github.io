@@ -7,7 +7,7 @@ This blog is up now. So, what do you have to say?
 
 
 <iframe src="/assets/lang.html"
-    style="max-width = 100%;text-align:center;"
+    style="max-width = 100%;text-align:left;"
     sandbox="allow-same-origin allow-scripts"
     width= "1000"
     height="600"
@@ -17,9 +17,9 @@ This blog is up now. So, what do you have to say?
 </iframe>
 
 <iframe src="/assets/taco.html"
-    style="max-width = 100%;text-align:center;"
+    style="max-width = 100%;text-align:left;"
     sandbox="allow-same-origin allow-scripts"
-    width= "1000"
+    width= "1200"
     height="1000"
     scrolling="no"
     seamless="seamless"
