@@ -5,7 +5,9 @@ comments: true
 ---
 This blog is up now. So, what do you have to say?
 
-<div style="text-align:center; width:100%;">
+<div style="display: flex;
+    align-items: center;
+    justify-content: center;">
 <iframe src="/assets/lang.html"
     style="max-width = 100%"
     sandbox="allow-same-origin allow-scripts"
@@ -14,20 +16,18 @@ This blog is up now. So, what do you have to say?
     align="middle"
     scrolling="no"
     seamless="seamless"
-    frameborder="0"
-    style="width:1000px">
+    frameborder="0"">
 </iframe>
 
 <iframe src="/assets/taco.html"
     style="max-width = 100%"
     sandbox="allow-same-origin allow-scripts"
-    width="1000"
+    width="800"
     height="1000"
     align="middle"
     scrolling="no"
     seamless="seamless"
-    frameborder="20"
-    style="width=1000px">
+    frameborder="20">
 </iframe>
 </div>
  
