@@ -21,6 +21,20 @@ Next you can update your site name, avatar and other options using the _config.y
 <div class="bk-root">
 <div class="bk-plotdiv" id="1047248a-0f3e-40e3-a8d3-5d5aefd13254"></div>
 <script type="text/javascript">
+    Bokeh.set_log_level("info");
+</script>
+<style>
+          html {
+            width: 100%;
+            height: 100%;
+          }
+          body {
+            width: 90%;
+            height: 100%;
+            margin: auto;
+          }
+</style>
+<script type="text/javascript">
             (function() {
           var fn = function() {
             Bokeh.safely(function() {
