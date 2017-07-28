@@ -56,7 +56,8 @@ The Stack Exchange Data is a huge one, ~ 200 GB. I downloaded it from this [link
 
 Now, with my data correctly formatted :
 
-##Time for some Analysis
+## Time for some Analysis
+|--------------------------|
 
 
 
@@ -133,6 +134,8 @@ Below is a table of the classification models and their respective accuracy:
 |Multi-layer Perceptron| 72.9|
 |SVM|91.6|
 |Random-Forest|94.8
+
+<table style='width=100%'><tr><th>Model</th><th>Accuracy on Validation Set</th></tr><tr><td>Multi-Layer Perceptron</td><td>72.9</td></tr><tr><td>SVM</td><td>91.6</td></tr><tr><td>Random-Forest</td><td>94.6</td></tr></table>
 
 <br><br><br><br>
 
