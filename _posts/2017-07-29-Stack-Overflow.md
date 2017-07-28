@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Taking on the Stack Overflow data dump: Analysis & Predicitons
+title: "Taking on the Stack Overflow data dump: Analysis & Predicitons"
 comments: true
 date:   2017-07-29 
 ---
