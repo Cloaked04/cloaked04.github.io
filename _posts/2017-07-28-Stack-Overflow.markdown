@@ -10,7 +10,7 @@ comments: true
 # Taking on the Stack Overflow data dump: Analysis & Predicitons
 
 <div class="imgcap">
-<img src="/assets/oURw.jpg" style="border:none;">
+<img src="/assets/oURrw.png" style="border:none;">
 </div>
 
 
@@ -46,13 +46,13 @@ The Stack Exchange Data is a huge one, ~ 200 GB. I downloaded it from this [link
 
 **Some points that I noted:**
 
-1. Use the `--local-data-infile` flag while logging into MySQL server. Without it, you'll get some pesky errors while importing and exporting files from your local machine.
+1. Use the ```--local-data-infile``` flag while logging into MySQL server. Without it, you'll get some pesky errors while importing and exporting files from your local machine.
 
 
 2. It is wise to convert MySQL tables into CSV when you need large amounts of data, of the order of a few million rows; improves speed.
 
 
-3. It is good to just export files from MySQL to `/var/Mysql/` and then using root to transfer the file wherever you want , than trying to change the default export folder. At times, as in my case, all attempts as trying to change the directory might fail.
+3. It is good to just export files from MySQL to ```/var/Mysql/``` and then using root to transfer the file wherever you want , than trying to change the default export folder. At times, as in my case, all attempts as trying to change the directory might fail.
 
 
 
@@ -178,7 +178,9 @@ Although, this is a plus, fasttext takes in input as a text file arranges in the
 
 After some pre-processing, my data looked like this:
 <br>
-`How to use fasttext for text classification in Python? _label-prefix_ Python`
+```python
+How to use fasttext for text classification in Python? _label-prefix_ Python
+```
 
 
 Now, I was ready to give predicting a shot.
@@ -186,11 +188,11 @@ Now, I was ready to give predicting a shot.
 Fasttest has a range of functionalities but the one I used is its Test Classification model that goes something like this:
 <br>
 
-&nbsp;&nbsp;&nbsp;`tag_classfier_model=fasttext.supervised('test_data.txt',model,label_prefix=__prefix__)`<br>
+&nbsp;&nbsp;&nbsp;```python tag_classfier_model=fasttext.supervised('test_data.txt',model,label_prefix=__prefix__)```<br>
 
 This produced two outputs: model.bin and model.vec. Fasttext is fast, like really fast. The first time I used it, my CPU usage spiked for around a few seconds and then it was back to normal, giving me the intuition that it did not work and there's a problem with my code. But, it was only after checking the bin file that I realised it's prowess. 
 
-This model was not good enough with only a **Precision** of 20% and **Recall** of little over 32%. Time for some more data cleaning. With some reading on Kaggle, other websites and random musings, I removed the `<code>`tags, gibberish special characters and  I made two instances of my data - one with html links embedded in text and the other without. I also increased my dataset to 2 million question and test set to 500,000. Training the model and testing the results gave the following results:<br><br>
+This model was not good enough with only a **Precision** of 20% and **Recall** of little over 32%. Time for some more data cleaning. With some reading on Kaggle, other websites and random musings, I removed the ```<code>``` tags, gibberish special characters and  I made two instances of my data - one with html links embedded in text and the other without. I also increased my dataset to 2 million question and test set to 500,000. Training the model and testing the results gave the following results:<br><br>
 <br>
 
 <div class="imgcap">
@@ -201,7 +203,6 @@ I still have the titles for each question. So, formatting and training a model t
 
 Finally, I use my Validation set, a set of 10,000 questions and 10,000 titles and predicted the best five labels. I also tried to predict labels by feeding titles to my model trained on questions and vice versa. The results follow in the table below:
 
-[Enter table here with values for each prediction]
 <br>
 
 <div class="imgcap">
@@ -221,6 +222,6 @@ So, *In the **END***
 
 The Stack Overflow data dump is a really profound dataset, a collection of human activities and queries. I believe I've barely scratched the surface with what can be done with this data. I have more questions that this data set can answer - what time does the website see the most activity, which programming language is used most for a certain task, how credible is an answer and many more. Further, I wonder if we can train a bot on the data to answer questions and also provide code examples, because we have seen Neural Networks ability to learn the basic rules of programming like indentation, variable asignment etc. and with novel approaches like One-shot learning, maybe they learn the right way to blurt out code.<br><br>
 
-THe possibilites are endless, so, let's keep out learning hats on and use the tools available to create something **MAGICAL**. 
+The possibilites are endless, so, let's keep out learning hats on and use the tools available to create something **MAGICAL**. 
 
  
