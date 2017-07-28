@@ -10,7 +10,7 @@ comments: true
 # Taking on the Stack Overflow data dump: Analysis & Predicitons
 
 <div class="imgcap">
-<img src="/assets/py.png" style="border:none;">
+<img src="/assets/oURw.jpg" style="border:none;">
 </div>
 
 
@@ -31,7 +31,10 @@ In this post, I will discuss the whole process I went through to get these resul
 
 Therefore, I used the following the following tools: 
 
-[Enter images for all packages used]
+<div class="imgcap">
+<img src="/assets/cover1.jpg" style="border:none;">
+</div>
+
 
 
 
@@ -81,9 +84,14 @@ Graphs are mathematical structures used to study pairwise relation between objec
 
 *It is a good idea to check the generated graph data for any self-looping nodes.*
 
-The number of (Node,Node) pairs is very large so, but most of them will have not depict any specific relationship. Hence, I took only the top 20 tags and fed them to [Gephi](https://gephi.org). Tweaking the settings for a while gave me something like this:
+The number of (Node,Node) pairs is very large so, but most of them will have not depict any specific relationship. Hence, I took only the top 20 tags and fed them to Gephi. Tweaking the settings for a while gave me something like this:
 
-[insert gephi pic and mention your inspiration]
+<div class="imgcap">
+<img src="/assets/SO_graph.png" style="border:none;">
+</div>
+
+**I got the inspiration of this design from another image I saw online**
+
 
 The above graph shows a strong relation between **C#** and **.net **,  **C#** and **asp.net** and a connection between **html** and **css**, **iphone** and **iphone-sdk** and a few others.
 
@@ -92,20 +100,39 @@ But I don't want to throw away the generated graph database. Bokeh, again, comes
 
 Below is an interactive heatmap of all 120 tag-pairs. 
 
-[INSERT taco.html here]
+<iframe src="/assets/taco.html"
+    style="max-width = 100%"
+    sandbox="allow-same-origin allow-scripts"
+    width="1000"
+    height="600"
+    scrolling="no"
+    seamless="seamless"
+    frameborder="0">
+</iframe>
 
 One fact is discernible the moment we look at the plot: Most of the tags have no occurences when comapred to the big names in the chart. Hmm.... A strange correlation with the **Wealth distribution in the World**.
 
 
 Once again, I find that, since all questions are associated with their respective creation dates, another plot can be made to see how the trends in language usage has changed over the years. Again, we need to do some formatting to get our data in order, but what how must I plot this . . . ?
 
-[Insert confused picture]
+
+<div class="imgcap">
+<img src="/assets/confused.png" style="border:none;">
+</div>
 
 
-For an analysis over the spans years, what better than the Gapminder visualisation.  Don't forget to play with the slider.
+For an analysis over the spans years, what better than the Gapminder visualisation.  Don't forget to play with the slider.<br><br>
 
-[insert lang.html]
-
+<iframe src="/assets/lang.html"
+    style="max-width = 100%"
+    sandbox="allow-same-origin allow-scripts"
+    width="1000"
+    height="1000"
+    scrolling="no"
+    seamless="seamless"
+    frameborder="0">
+</iframe>
+<br><br>
 The rise and fall of different programming languages over the years is evident from the plot,most obviously the fall of PHP and the rise of Javascript and Python. 
 
 
@@ -130,22 +157,17 @@ Below is a table of the classification models and their respective accuracy:
 
  <br>
 
-|Model|Accuracy on Validation set|
-|--------|----------------------------------|
-|Multi-layer Perceptron|&npsb;&npsb; 72.9|
-|SVM|&npsb;&npsb;91.6|
-|Random-Forest|&npsb;&npsb;94.8
+<div class="imgcap">
+<img src="/assets/score_table.png" style="border:none;">
+</div>
 
-<table style='width=100%'><tr><th>Model</th><th>Accuracy on Validation Set</th></tr><tr><td>Multi-Layer Perceptron</td><td>72.9</td></tr><tr><td>SVM</td><td>91.6</td></tr><tr><td>Random-Forest</td><td>94.6</td></tr></table>
 
 <br><br><br><br>
 
 #### Tag Prediction
 
-**Now** this is the real beast. I started by doing a test-train split, with initially keeping 1 million questions in my test set and 200,000 questions in my test set. Simply, feeding this into our goto Scikit- Learn models provided very deplorable results:
-
-[Enter table of predictions including rf,svm etc below.]
-
+**Now** this is the real beast. I started by doing a test-train split, with initially keeping 1 million questions in my test set and 200,000 questions in my test set. Simply, feeding this into our goto Scikit- Learn models provided very deplorable results.
+<br><br>
 
 Then, I went surfing on the internet and found a real gem - *[fasttest](https://pypi.python.org/pypi/fasttext)*, a Word Representation package by Facebook. It has a very straight-forward schematic; the best this of all - you do not need to go through preparing a Word Representation using  Tf-Idf Vectorizer. 
 <br><br>
@@ -169,10 +191,9 @@ This produced two outputs: model.bin and model.vec. Fasttext is fast, like reall
 This model was not good enough with only a **Precision** of 20% and **Recall** of little over 32%. Time for some more data cleaning. With some reading on Kaggle, other websites and random musings, I removed the `<code>`tags, gibberish special characters and  I made two instances of my data - one with html links embedded in text and the other without. I also increased my dataset to 2 million question and test set to 500,000. Training the model and testing the results gave the following results:<br><br>
 <br>
 
-|Data Instance|Accuaracy|
-|------------------|--------------|
-|With HTML Links| Precision - 58.6<br>Recall  - 63.5
-|Without HTML Links| Precision - 67.8<br> Recall - 76.23|
+<div class="imgcap">
+<img src="/assets/que_table.png" style="border:none;">
+</div>
 
 I still have the titles for each question. So, formatting and training a model tuned out to be a better option with giving out `73%` on precision and `80%` on recall.
 
@@ -181,11 +202,9 @@ Finally, I use my Validation set, a set of 10,000 questions and 10,000 titles an
 [Enter table here with values for each prediction]
 <br>
 
-|Data Instance|Accuracy|
-|------------------|------------|
-|Titles| 70.64|
-|Question in Titles model| 61|
-|Titles in Questions model| 68.26|
+<div class="imgcap">
+<img src="/assets/titles_table.png" style="border:none;">
+</div>
 
 So, turned out that titles are a better options. I think, mainly this is because titles contain outright statements mentioning names of programming languages which might help the model make better predictions. Moreover, best Kaggle models also turned out to use some kind of mixture of titles and questions.
 <br><br><br>
@@ -194,7 +213,9 @@ So, turned out that titles are a better options. I think, mainly this is because
 <br>
 So, *In the **END***
 
-[Enter Linkin Park In the End Pic]
+<div class="imgcap">
+<img src="/assets/intheend.png" style="border:none;">
+</div>
 
 The Stack Overflow data dump is a really profound dataset, a collection of human activities and queries. I believe I've barely scratched the surface with what can be done with this data. I have more questions that this data set can answer - what time does the website see the most activity, which programming language is used most for a certain task, how credible is an answer and many more. Further, I wonder if we can train a bot on the data to answer questions and also provide code examples, because we have seen Neural Networks ability to learn the basic rules of programming like indentation, variable asignment etc. and with novel approaches like One-shot learning, maybe they learn the right way to blurt out code.<br><br>
 
