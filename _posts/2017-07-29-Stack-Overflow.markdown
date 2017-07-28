@@ -190,7 +190,6 @@ Fasttest has a range of functionalities but the one I used is its Test Classific
 ```python 
 tag_classfier_model=fasttext.supervised('test_data.txt',model,label_prefix=__prefix__)
 ```
-<br>
 
 This produced two outputs: model.bin and model.vec. Fasttext is fast, like really fast. The first time I used it, my CPU usage spiked for around a few seconds and then it was back to normal, giving me the intuition that it did not work and there's a problem with my code. But, it was only after checking the bin file that I realised it's prowess. 
 
