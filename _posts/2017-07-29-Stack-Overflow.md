@@ -2,6 +2,7 @@
 layout: post
 title: Taking on the Stack Overflow data dump: Analysis & Predicitons
 comments: true
+date:   2017-07-29 
 ---
 
 
@@ -33,15 +34,10 @@ Therefore, I used the following the following tools:
 <div class="imgcap">
 <img src="/assets/cover1.jpg" style="border:none;">
 </div>
-
-
-
-
+<br><br>
 #### Getting the data & Pre-processing
 
 The Stack Exchange Data is a huge one, ~ 200 GB. I downloaded it from this [link](https://archive.org/details/stackexchange). This data dump contains all questries, except for those deleted or met some other fate, from 2008 till date.  Now, I fed the data in to MySQL for easy manipulation, because - you know - I'm lazy, and ran some queries to get the hang of it. Then I went on to install [MySQL connector](https://www.mysql.com/products/connector/) for easy access of database from my python. 
-
-
 
 **Some points that I noted:**
 
@@ -59,7 +55,7 @@ The Stack Exchange Data is a huge one, ~ 200 GB. I downloaded it from this [link
 
 
 Now, with my data correctly formatted :
-
+<br>
 ## Time for some Analysis
 
 
