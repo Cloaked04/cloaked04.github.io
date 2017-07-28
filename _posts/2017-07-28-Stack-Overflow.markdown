@@ -38,7 +38,7 @@ Therefore, I used the following the following tools:
 
 
 
-####Getting the data & Pre-processing
+#### Getting the data & Pre-processing
 
 The Stack Exchange Data is a huge one, ~ 200 GB. I downloaded it from this [link](https://archive.org/details/stackexchange). This data dump contains all questries, except for those deleted or met some other fate, from 2008 till date.  Now, I fed the data in to MySQL for easy manipulation, because - you know - I'm lazy, and ran some queries to get the hang of it. Then I went on to install [MySQL connector](https://www.mysql.com/products/connector/) for easy access of database from my python. 
 
@@ -70,7 +70,9 @@ Now, with my data correctly formatted :
 First, taking the *Viewcount* from table Tags and plotting for most used tags, the graph looks something like this:
 
 
-[INSERT TOP TAGS PLOT]
+<div class="imgcap">
+<img src="/assets/tag_ussage.png" style="border:none;">
+</div>
 
 Moreover, the top 10% tags account for more than 80%  of the questions on Stack Overflow.
 
@@ -103,8 +105,8 @@ Below is an interactive heatmap of all 120 tag-pairs.
 <iframe src="/assets/taco.html"
     style="max-width = 100%"
     sandbox="allow-same-origin allow-scripts"
-    width="1000"
-    height="600"
+    width="1200"
+    height="1000"
     scrolling="no"
     seamless="seamless"
     frameborder="0">
@@ -126,8 +128,8 @@ For an analysis over the spans years, what better than the Gapminder visualisati
 <iframe src="/assets/lang.html"
     style="max-width = 100%"
     sandbox="allow-same-origin allow-scripts"
-    width="1000"
-    height="1000"
+    width="900"
+    height="600"
     scrolling="no"
     seamless="seamless"
     frameborder="0">
@@ -214,7 +216,7 @@ So, turned out that titles are a better options. I think, mainly this is because
 So, *In the **END***
 
 <div class="imgcap">
-<img src="/assets/intheend.png" style="border:none;">
+<img src="/assets/intheend.jpg" style="border:none;">
 </div>
 
 The Stack Overflow data dump is a really profound dataset, a collection of human activities and queries. I believe I've barely scratched the surface with what can be done with this data. I have more questions that this data set can answer - what time does the website see the most activity, which programming language is used most for a certain task, how credible is an answer and many more. Further, I wonder if we can train a bot on the data to answer questions and also provide code examples, because we have seen Neural Networks ability to learn the basic rules of programming like indentation, variable asignment etc. and with novel approaches like One-shot learning, maybe they learn the right way to blurt out code.<br><br>
