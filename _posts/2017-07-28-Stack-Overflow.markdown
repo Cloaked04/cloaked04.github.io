@@ -1,13 +1,12 @@
 ---
 layout: post
-title: Stack Overflow Analysis
+title: Taking on the Stack Overflow data dump: Analysis & Predicitons
 comments: true
 ---
 
 
 
 
-# Taking on the Stack Overflow data dump: Analysis & Predicitons
 
 <div class="imgcap">
 <img src="/assets/so.png" style="border:none;">
@@ -188,11 +187,10 @@ Now, I was ready to give predicting a shot.
 
 Fasttest has a range of functionalities but the one I used is its Test Classification model that goes something like this:
 <br>
-
-&nbsp;&nbsp;&nbsp;
 ```python 
 tag_classfier_model=fasttext.supervised('test_data.txt',model,label_prefix=__prefix__)
-```<br>
+```
+<br>
 
 This produced two outputs: model.bin and model.vec. Fasttext is fast, like really fast. The first time I used it, my CPU usage spiked for around a few seconds and then it was back to normal, giving me the intuition that it did not work and there's a problem with my code. But, it was only after checking the bin file that I realised it's prowess. 
 
