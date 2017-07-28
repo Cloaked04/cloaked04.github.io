@@ -1,3 +1,12 @@
+---
+layout: post
+title: Stack Overflow Analysis
+comments: true
+---
+
+
+
+
 #Taking on the Stack Overflow data dump: Analysis & Predicitons
 
 [Insert images here]
