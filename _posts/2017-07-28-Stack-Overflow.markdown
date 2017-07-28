@@ -10,7 +10,7 @@ comments: true
 # Taking on the Stack Overflow data dump: Analysis & Predicitons
 
 <div class="imgcap">
-<img src="/assets/py.png",style="border:none;">
+<img src="/assets/py.png" style="border:none;">
 </div>
 
 
