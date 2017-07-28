@@ -7,7 +7,7 @@ comments: true
 
 
 
-#Taking on the Stack Overflow data dump: Analysis & Predicitons
+# Taking on the Stack Overflow data dump: Analysis & Predicitons
 
 [Insert images here]
 
@@ -23,7 +23,7 @@ In this post, I will discuss the whole process I went through to get these resul
 
 
 
-###Tools of trade
+### Tools of trade
 
 *"Man is a tool-using animal. Without tools he is nothing, with tools he is all"* *- Thomas Carlyle*
 
@@ -113,10 +113,10 @@ Axis values in the graph are completely random and only used to position the bub
 Equipped with some idea of what's happening inside those large tables of data, it is time for some predictions.
 <br><br><br><br><br>
 
-##Score Prediction using Scikit-Learn
+## Score Prediction using Scikit-Learn
 
 <br><br><br>
-####Score Prediction
+#### Score Prediction
 ***
 <br>
 Answers are judged for their accuracy by the scores they get. A high score resembles a good answer and vice-versa. To predict scores, a model is trained on answers and scores as labels. I used 1.5 million answers as test data and 0.5 million answers as test data. 
@@ -136,7 +136,7 @@ Below is a table of the classification models and their respective accuracy:
 
 <br><br><br><br>
 
-####Tag Prediction
+#### Tag Prediction
 
 **Now** this is the real beast. I started by doing a test-train split, with initially keeping 1 million questions in my test set and 200,000 questions in my test set. Simply, feeding this into our goto Scikit- Learn models provided very deplorable results:
 
@@ -186,7 +186,7 @@ Finally, I use my Validation set, a set of 10,000 questions and 10,000 titles an
 So, turned out that titles are a better options. I think, mainly this is because titles contain outright statements mentioning names of programming languages which might help the model make better predictions. Moreover, best Kaggle models also turned out to use some kind of mixture of titles and questions.
 <br><br><br>
 
-##Conclusion & Beyond
+## Conclusion & Beyond
 <br>
 So, *In the **END***
 
