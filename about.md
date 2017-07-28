@@ -4,12 +4,11 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+I am a high school graduate, and a late bloomer immensely interested in CS, Quantum Physics and arts. 
 
-### More Information
-
-A place to include any other types of information that you'd like to include about yourself.
+I love the idea of thinking about something new and whipping into existence. 
+Therefore, I want to understand the basics of everything and be able to figure out how **Everything Connects**.
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[iownpratyush@gmail.com](mailto:iownpratyush@gmail.com)
