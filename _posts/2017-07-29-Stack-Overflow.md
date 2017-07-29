@@ -66,7 +66,7 @@ First, taking the *Viewcount* from table Tags and plotting for most used tags, t
 
 
 <div class="imgcap">
-<img src="/assets/tag_ussage.png" style="border:none;">
+<img src="/assets/tag_usage.png" style="border:none;">
 </div>
 
 Moreover, the top 10% tags account for more than 80%  of the questions on Stack Overflow.
