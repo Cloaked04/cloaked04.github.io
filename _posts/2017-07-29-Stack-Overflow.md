@@ -29,7 +29,7 @@ In this post, I will discuss the whole process I went through to get these resul
 
 *"Man is a tool-using animal. Without tools he is nothing, with tools he is all"* *- Thomas Carlyle*
 
-Therefore, I used the following the following tools: 
+Therefore, I used the following tools: 
 
 <div class="imgcap">
 <img src="/assets/cover1.jpg" style="border:none;">
@@ -37,7 +37,7 @@ Therefore, I used the following the following tools:
 <br><br>
 #### Getting the data & Pre-processing
 
-The Stack Exchange Data is a huge one, ~ 200 GB. I downloaded it from this [link](https://archive.org/details/stackexchange). This data dump contains all questries, except for those deleted or met some other fate, from 2008 till date.  Now, I fed the data in to MySQL for easy manipulation, because - you know - I'm lazy, and ran some queries to get the hang of it. Then I went on to install [MySQL connector](https://www.mysql.com/products/connector/) for easy access of database from my python. 
+The Stack Exchange Data is a huge one, ~ 200 GB. I downloaded it from this [link](https://archive.org/details/stackexchange). This data dump contains all queries, except for those deleted or met some other fate, from 2008 till date.  Now, I fed the data into MySQL for easy manipulation, because - you know - I'm lazy, and ran some queries to get the hang of it. Then I went on to install [MySQL connector](https://www.mysql.com/products/connector/) for easy access of database from my python. 
 
 **Some points that I noted:**
 
@@ -71,7 +71,7 @@ First, taking the *Viewcount* from table Tags and plotting for most used tags, t
 
 Moreover, the top 10% tags account for more than 80%  of the questions on Stack Overflow.
 
-Moving further! Upon formating the data from Posts into Pandas Dataframe, I see that there are more than one tags for most of the questions. This can be used to generate some interesting visualisations. Determining the co-occurence pairs is a very tedious task so I take the top 120 tags and plot the co-occurence. 
+Moving further! Upon formating the data from Posts into Pandas Dataframe, I see that there are more than one tags for most of the questions. This can be used to generate some interesting visualisations. Determining the co-occurence pairs is a very tedious task, so I take the top 200 tags for the task.
 
 
 Now, I made a degression to  study about **Graph Theory**. But why? 
@@ -95,7 +95,7 @@ The above graph shows a strong relation between **C#** and **.net **,  **C#** an
 But I don't want to throw away the generated graph database. Bokeh, again, comes to the rescue.
 
 
-Below is an interactive heatmap of all 120 tag-pairs. 
+Below is an interactive heatmap of 80 tag-pairs. 
 
 <iframe src="/assets/taco.html"
     style="max-width = 100%"
@@ -107,7 +107,7 @@ Below is an interactive heatmap of all 120 tag-pairs.
     frameborder="0">
 </iframe>
 
-One fact is discernible the moment we look at the plot: Most of the tags have no occurences when comapred to the big names in the chart. Hmm.... A strange correlation with the **Wealth distribution in the World**.
+One fact is discernible the moment we look at the plot: Most of the tags have no occurences when comapred to that of big names in the chart. Hmm.... A strange correlation with the **Wealth distribution in the World**.
 
 
 Once again, I find that, since all questions are associated with their respective creation dates, another plot can be made to see how the trends in language usage has changed over the years. Again, we need to do some formatting to get our data in order, but what how must I plot this . . . ?
@@ -196,7 +196,7 @@ This model was not good enough with only a **Precision** of 20% and **Recall** o
 <img src="/assets/que_table.png" style="border:none;">
 </div>
 
-I still have the titles for each question. So, formatting and training a model tuned out to be a better option with giving out `73%` on precision and `80%` on recall.
+I still have the titles for each question. So, formatting and training a model tuned out to be a better option with giving out `73.09%` on precision and `78.36%` on recall.
 
 Finally, I use my Validation set, a set of 10,000 questions and 10,000 titles and predicted the best five labels. I also tried to predict labels by feeding titles to my model trained on questions and vice versa. The results follow in the table below:
 
