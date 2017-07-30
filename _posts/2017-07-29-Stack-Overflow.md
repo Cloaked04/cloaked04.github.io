@@ -21,7 +21,7 @@ The website's data dump has always been a popular among both Grad students and r
 
 I've always wanted to learn about Data Science, hence, I decided to put on my learning hat and choose this very humongous for the purpose. So, enough ramblings, let's talk business.
 
-In this post, I will discuss the whole process I went through to get these results. All of my code is available at my Github repository[my Github repository](https://github.com/Cloaked04/Stack_Overflow_Analysis) .
+In this post, I will discuss the whole process I went through to get these results. All of my code is available at [my Github repository](https://github.com/Cloaked04/Stack_Overflow_Analysis) .
 
 
 
@@ -110,7 +110,7 @@ Below is an interactive heatmap of 80 tag-pairs.
 One fact is discernible the moment we look at the plot: Most of the tags have no occurences when comapred to that of big names in the chart. Hmm.... A strange correlation with the **Wealth distribution in the World**.
 
 
-Once again, I find that, since all questions are associated with their respective creation dates, another plot can be made to see how the trends in language usage has changed over the years. Again, we need to do some formatting to get our data in order, but what how must I plot this . . . ?
+Once again, I find that, since all questions are associated with their respective creation dates, another plot can be made to see how the trends in language usage has changed over the years. But,how must I plot this . . . ?
 
 
 <div class="imgcap">
@@ -118,7 +118,7 @@ Once again, I find that, since all questions are associated with their respectiv
 </div>
 
 
-For an analysis over the spans years, what better than the Gapminder visualisation.  Don't forget to play with the slider.<br><br>
+For an analysis over the years, what could be better than the Gapminder. Don't forget to play with the slider.<br><br>
 
 <iframe src="/assets/lang.html"
     style="max-width = 100%"
@@ -164,10 +164,10 @@ Below is a table of the classification models and their respective accuracy:
 #### Tag Prediction
 ***
 
-**Now** this is the real beast. I started by doing a test-train split, with initially keeping 1 million questions in my test set and 200,000 questions in my test set. Simply, feeding this into our goto Scikit- Learn models provided very deplorable results.
+**Now** this is the real beast. I started by doing a test-train split, with initially keeping 1 million questions in my test set and 200,000 questions in my test set. Simply, feeding this into our go-to Scikit- Learn models provided very deplorable results.
 <br><br>
 
-Then, I went surfing on the internet and found a real gem - *[fasttest](https://pypi.python.org/pypi/fasttext)*, a Word Representation package by Facebook. It has a very straight-forward schematic; the best this of all - you do not need to go through preparing a Word Representation using  Tf-Idf Vectorizer. 
+Then, I went surfing on the internet and found a real gem - *[fasttext](https://pypi.python.org/pypi/fasttext)*, a Word Representation package by Facebook. It has a very straight-forward schematic; the best this of all - you do not need to go through preparing a Word Representation using  Tf-Idf Vectorizer. 
 <br><br>
 
 Although, this is a plus, fasttext takes in input as a text file arranges in the order of one data point per line separated by a label prefix and the corresponding label. <br>
@@ -181,7 +181,7 @@ How to use fasttext for text classification in Python? _label-prefix_ Python
 
 Now, I was ready to give predicting a shot.
 
-Fasttest has a range of functionalities but the one I used is its Test Classification model that goes something like this:
+Fasttext has a range of functionalities, but the one I used is its Test Classification model that goes something like this:
 <br>
 ```python 
 tag_classfier_model=fasttext.supervised('test_data.txt',model,label_prefix=__prefix__)
@@ -198,7 +198,7 @@ This model was not good enough with only a **Precision** of 20% and **Recall** o
 
 I still have the titles for each question. So, formatting and training a model tuned out to be a better option with giving out `73.09%` on precision and `78.36%` on recall.
 
-Finally, I use my Validation set, a set of 10,000 questions and 10,000 titles and predicted the best five labels. I also tried to predict labels by feeding titles to my model trained on questions and vice versa. The results follow in the table below:
+Finally, I use my Validation set, a set of 10,000 questions and 10,000 titles and predicted the best five labels. I also tried to predict labels by feeding titles to my model trained on questions and vice-versa. The results follow in the table below:
 
 <br>
 
@@ -206,7 +206,7 @@ Finally, I use my Validation set, a set of 10,000 questions and 10,000 titles an
 <img src="/assets/titles_table.png" style="border:none;">
 </div>
 
-So, turned out that titles are a better options. I think, mainly this is because titles contain outright statements mentioning names of programming languages which might help the model make better predictions. Moreover, best Kaggle models also turned out to use some kind of mixture of titles and questions.
+So,it turns out, titles are a better options. I think, mainly this is because titles contain outright statements mentioning names of programming languages which might help the model make better predictions. Moreover, best models on Kaggle also used a dataset that used both titles and questions in a sophisticated manner.
 <br><br>
 
 ## Conclusion & Beyond
@@ -217,7 +217,7 @@ So, *In the **END***
 <img src="/assets/intheend.jpg" style="border:none;">
 </div>
 
-The Stack Overflow data dump is a really profound dataset, a collection of human activities and queries. I believe I've barely scratched the surface with what can be done with this data. I have more questions that this data set can answer - what time does the website see the most activity, which programming language is used most for a certain task, how credible is an answer and many more. Further, I wonder if we can train a bot on the data to answer questions and also provide code examples, because we have seen Neural Networks ability to learn the basic rules of programming like indentation, variable asignment etc. and with novel approaches like One-shot learning, maybe they learn the right way to blurt out code.<br><br>
+The Stack Overflow data dump is a really profound dataset, a collection of human activities and queries. I believe I've barely scratched the surface on what can be done with this data. I have more questions that this data set can answer - what time does the website see the most activity, which programming language is used most for a certain task, how credible is an answer and many more. Further, I wonder if we can train a bot on the data to answer questions and also provide code examples, because we have seen Neural Network's ability to learn the basic rules of programming like indentation, variable assignment etc. and with novel approaches like One-shot learning, maybe they can learn the right way to blurt out code.<br><br>
 
 The possibilites are endless, so, let's keep out learning hats on and use the tools available to create something **MAGICAL**. 
 
