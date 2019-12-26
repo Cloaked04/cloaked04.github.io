@@ -4,8 +4,9 @@ title: "Linear models in the quest for maximising Likelihood"
 ---
 
 
-
-![collage](/home/cloaked04/Documents/Blog Materials/Linear_Models/collage.png)
+<div class="imgcap">
+<img src="/assets/collage.png" style="border:none;">
+</div>
 
 
 
